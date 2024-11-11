@@ -1,0 +1,43 @@
+{
+    "datasets": [
+        {
+            "id": "Basketball_Shots",
+            "name": "NCAA 3-Point Attempts",
+            "path": "datasets/basketball.csv",
+            "metadataPath": "datasets/basketball.json",
+            "imagePath": "datasets/basketball.jpg"
+          },
+
+          {
+            "id": "Car_Evaluation",
+            "name": "Car Evaluation",
+            "path": "datasets/car_evaluation.csv",
+            "metadataPath": "datasets/car_evaluation.json",
+            "imagePath": "datasets/car_evaluation.jpg"
+          },
+
+          {
+            "id": "Happiness",
+            "name": "Global Happiness",
+            "path": "datasets/global_happiness_raw.csv",
+            "metadataPath": "datasets/global_happiness_raw.json",
+            "imagePath": "datasets/global_happiness.jpg"
+          },
+
+          {
+            "id": "Medical Data",
+            "name": "Heart Health",
+            "path": "datasets/medical_data.csv",
+            "metadataPath": "datasets/medical_data.json",
+            "imagePath": "datasets/medical_data.jpg"
+          },
+
+        {
+            "id": "Real Estate Data",
+            "name": "Real Estate",
+            "path": "datasets/real_estate.csv",
+            "metadataPath": "datasets/real_estate.json",
+            "imagePath": "datasets/real_estate.jpg"
+        }
+    ]
+}

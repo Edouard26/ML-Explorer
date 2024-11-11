@@ -1,0 +1,8 @@
+
+{
+  "presets": [
+    // ...existing presets...
+    "@babel/preset-react"
+  ]
+  // ...existing code...
+}
