@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { isRegression, setResultsHighlightRow } from "../redux";
 import { styles, colors, REGRESSION_ERROR_TOLERANCE } from "../constants";
-import { resultsPropType } from "./shapes";
+import { resultsPropType } from "./shape";
 import I18n from "../i18n";
 import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 

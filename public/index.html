@@ -37,9 +37,11 @@
     </style>
   </head>
   <body>
-    <div id="instructions">
-      <h1>ML-Explorer</h1>
-      <p>Explore machine learning models in your browser.</p>
+    <div id="instructions"></div>
+    <select id="mode-select" onchange="location = '?mode=' + this.options[this.selectedIndex].value">
+      <option disabled selected value="/">Jump to mode...</option>
+      <option value="">default</option>
+    </select>
     <div id="root"></div>
     <script src="mainDev.js"></script>
   </body>

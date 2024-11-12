@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getScatterPlotData } from "../selectors/visualizationSelectors.js";
+import { getScatterPlotData } from "../selectors/visualisationSelectors.js";
 import { styles, colors } from "../constants.js";
 import { Scatter } from "react-chartjs-2";
 import I18n from "../i18n";

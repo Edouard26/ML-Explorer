@@ -7,8 +7,8 @@ import { getLabelToSave, getFeaturesToSave } from "../redux";
 import { getPercentCorrect } from "../helpers/accuracy";
 import { getDatasetDetails } from "../helpers/datasetDetails";
 import Statement from "./Statement";
-import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
-import { datasetDetailsShape, trainedModelDetailsShape, modelCardColumnShape } from "./shapes";
+import aiBotBorder from "../images/ai-bot/ai-bot-border.png";
+import { datasetDetailsShape, trainedModelDetailsShape, modelCardColumnShape } from "./shape";
 import I18n from "../i18n";
 import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 

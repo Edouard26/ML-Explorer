@@ -4,13 +4,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getTableData, readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
-import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
-import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
-import blueScanner from "@public/images/ai-bot/blue-scanner.png";
-import background from "@public/images/results-background-light.jpg";
+import aiBotHead from "../images/ai-bot/ai-bot-head.png";
+import aiBotBody from "../images/ai-bot/ai-bot-body.png"; 
+import blueScanner from "../images/ai-bot/blue-scanner.png";
+import background from "../images/results-background-light.png";
 import DataTable from "./DataTable";
-import { TestingAnimationDescription } from "./AnimationDescriptions";
 import I18n from "../i18n";
+import { TrainingAnimationDescription } from "./AnimationDescription";
 
 const framesPerCycle = 80;
 const maxNumItems = 7;
@@ -206,7 +206,7 @@ class GenerateResults extends Component {
             </div>
           </div>
         </div>
-        <TestingAnimationDescription />
+        <TrainingAnimationDescription />
       </div>
     );
   }

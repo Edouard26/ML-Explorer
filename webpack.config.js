@@ -10,7 +10,9 @@ const commonConfig = {
     // be added in package.json in the jest configuration.
     alias: {
       '@ml': path.resolve(__dirname, 'src'),
-      '@public': path.resolve(__dirname, 'public')
+      '@public': path.resolve(__dirname, 'public'),
+      'UI': path.resolve(__dirname, 'src/UI/Components'),
+      '@components': path.resolve(__dirname, 'src/UI/Components')
     }
   },
   output: {
@@ -20,8 +22,14 @@ const commonConfig = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader'
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
       },
       {
         test: /\.css$/,

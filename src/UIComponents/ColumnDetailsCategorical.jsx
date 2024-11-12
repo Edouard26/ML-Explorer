@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { colors, styles } from "../constants";
 import { Bar } from "react-chartjs-2";
-import { categeoricalColumnDetailsShape } from "./shapes";
+import { categeoricalColumnDetailsShape } from "./shape";
 import {
   getCategoricalColumnDetails
 } from "../selectors/currentColumnSelectors";
@@ -84,3 +84,4 @@ export default connect(
     columnDetails: getCategoricalColumnDetails(state)
   })
 )(ColumnDetailsCategorical);
+   

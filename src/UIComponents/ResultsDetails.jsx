@@ -9,9 +9,9 @@ import {
   getIncorrectResults
 } from "../helpers/accuracy";
 import { ResultsGrades, styles } from "../constants";
-import { resultsPropType } from "./shapes";
+import { resultsPropType } from "./shape";
 import ResultsToggle from "./ResultsToggle";
-import ResultsTable from "./ResultsTable";
+import ResultsTable from "./ResultTable";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 

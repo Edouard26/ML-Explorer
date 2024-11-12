@@ -16,7 +16,7 @@ import ColumnDataTypeDropdown from "./ColumnDataTypeDropdown";
 import AddFeatureButton from "./AddFeatureButton";
 import SelectLabelButton from "./SelectLabelButton";
 import UniqueOptionsWarning from "./UniqueOptionsWarning";
-import { currentColumnInspectorShape } from "./shapes";
+import { currentColumnInspectorShape } from "./shape";
 import I18n from "../i18n";
 import { getLocalizedColumnName } from "../helpers/columnDetails.js";
 

@@ -5,10 +5,10 @@
 */
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getCrossTabData } from "../selectors/visualizationSelectors";
+import { getCrossTabData } from "../selectors/visualisationSelectors";
 import { styles } from "../constants.js";
 import ScrollableContent from "./ScrollableContent";
-import { crossTabDataShape } from "./shapes";
+import { crossTabDataShape } from "./shape";
 import I18n from "../i18n";
 
 class CrossTab extends Component {

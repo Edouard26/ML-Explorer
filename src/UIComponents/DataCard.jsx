@@ -4,7 +4,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants.js";
 import ScrollableContent from "./ScrollableContent";
-import { metadataShape, datasetDetailsShape } from "./shapes.js";
+import { metadataShape, datasetDetailsShape } from "./shape.js";
 import I18n from "../i18n";
 import { getDatasetDetails } from "../helpers/datasetDetails";
 

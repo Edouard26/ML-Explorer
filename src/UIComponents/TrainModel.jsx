@@ -6,11 +6,11 @@ import { store } from "../index.js";
 import train from "../train";
 import { getTableData, readyToTrain } from "../redux";
 import { styles, getFadeOpacity } from "../constants";
-import aiBotHead from "@public/images/ai-bot/ai-bot-head.png";
-import aiBotBody from "@public/images/ai-bot/ai-bot-body.png";
-import background from "@public/images/results-background-light.jpg";
+import aiBotHead from "../images/ai-bot/ai-bot-head.png";
+import aiBotBody from "../images/ai-bot/ai-bot-body.png";
+import background from "../images/results-background-light.png";
 import DataTable from "./DataTable";
-import { TrainingAnimationDescription } from "./AnimationDescriptions";
+import { TrainingAnimationDescription } from "./AnimationDescription";
 import I18n from "../i18n";
 
 const framesPerCycle = 80;

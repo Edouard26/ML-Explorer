@@ -13,7 +13,7 @@ import {
   getExtremaByColumn
 } from "../selectors";
 import { styles } from "../constants";
-import aiBotBorder from "@public/images/ai-bot/ai-bot-border.png";
+import aiBotBorder from "../images/ai-bot/ai-bot-border.png";
 import ScrollableContent from "./ScrollableContent";
 import I18n from "../i18n";
 import { getLocalizedColumnName } from "../helpers/columnDetails.js";

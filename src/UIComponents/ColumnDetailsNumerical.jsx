@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { styles } from "../constants";
 import { getNumericalColumnDetails } from "../selectors/currentColumnSelectors";
-import { numericalColumnDetailsShape } from "./shapes"
+import { numericalColumnDetailsShape } from "./shape"
 import I18n from "../i18n";
 
 class ColumnDetailsNumerical extends Component {
