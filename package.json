@@ -27,7 +27,8 @@
     "test:unit": "jest ./test/unit/*.js",
     "preversion": "yarn install && yarn run test",
     "version": "yarn run build",
-    "postversion": "git push && git push --tags && yarn publish"
+    "postversion": "git push && git push --tags && yarn publish",
+    "start": "node server_config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -82,7 +83,15 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "chart.js": "^2.9.4",
+    "express": "^4.21.1",
     "react-chartjs-2": "^2.11.1",
     "reselect": "^4.0.0"
-  }
+  },
+  "description": "// ...existing code...",
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edouard26/ML-Explorer/issues"
+  },
+  "homepage": "https://github.com/Edouard26/ML-Explorer#readme"
 }
