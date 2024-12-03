@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App.js";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
@@ -42,16 +42,18 @@ export const initAll = function (options) {
   store.dispatch(setMode(mode));
   processMode(mode);
 
-  ReactDOM.render(
-    <Provider store={store}>
-      <App
-        mode={mode}
-        onContinue={onContinue}
-        startSaveTrainedModel={startSaveTrainedModel}
-      />
-    </Provider>,
-    document.getElementById("root")
-  );
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    ReactDOM.createRoot(rootElement).render(
+      <Provider store={store}>
+        <App
+          mode={mode}
+          onContinue={onContinue}
+          startSaveTrainedModel={startSaveTrainedModel}
+        />
+      </Provider>
+    );
+  }
 };
 
 export const instructionsDismissed = function() {

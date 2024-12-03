@@ -1,13 +1,12 @@
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const path = require("path");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const commonConfig = {
   devtool: 'eval-cheap-module-source-map',
   resolve: {
     extensions: ["*", ".js", ".jsx"],
-    // Note: Separate aliases are required for aliases to work in unit tests. These should
-    // be added in package.json in the jest configuration.
     alias: {
       '@ml': path.resolve(__dirname, 'src'),
       '@public': path.resolve(__dirname, 'public'),
@@ -33,17 +32,7 @@ const commonConfig = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'], // Updated loader configuration
-      },
-      {
-        test: /\.jsx$/,
-        enforce: 'pre',
-        exclude: /(node_modules)/,
-        use: [
-          {
-            loader: 'babel-loader',
-          }
-        ]
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(png|jpg)$/,
@@ -52,17 +41,11 @@ const commonConfig = {
           limit: 8192,
           outputPath: 'assets/images',
           publicPath: 'images',
-          postTransformPublicPath: p =>
-            `__ml_playground_asset_public_path__ + ${p}`,
-          name: '[name].[ext]?[contenthash]'
         }
       },
     ]
   },
   performance: {
-    assetFilter: function(assetFilename) {
-      return /^assets\//.test(assetFilename);
-    },
     maxAssetSize: 300000,
     maxEntrypointSize: 10500000
   }
@@ -70,15 +53,20 @@ const commonConfig = {
 
 const firstConfigOnly = {
   plugins: [
-    new CleanWebpackPlugin(),
-    new CopyPlugin([
-      {
-        from: 'public/datasets/*.*',
-        to: 'assets/datasets/',
-        flatten: true
-      }
-    ])
-  ]
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'public', 'datasets'),
+          to: path.resolve(__dirname, 'dist', 'assets', 'datasets'),
+        },
+      ],
+    }),
+
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: './index.html'
+    })
+  ],
 };
 
 const externalConfig = {
@@ -101,7 +89,7 @@ const defaultConfig = [
   },
   {
     entry: {
-      mainDev: './src/indexDev.js'
+      mainDev: './src/indexProd.js'
     },
     ...commonConfig
   }
