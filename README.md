@@ -26,7 +26,7 @@ What you can do here:
 
 - using the trained model by doing predictions
 
-- saving the trained model to the server for use in App Lab
+- saving the trained model to the server
 
   Navigation:
 
